@@ -127,16 +127,47 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Bước 4: Cấu hình
+### Bước 4: Chuẩn bị token
 
-Sửa file `config/config.json` theo nhu cầu (xem phần [Cấu hình](#-cấu-hình)).
-
-### Bước 5: Chuẩn bị token
-
-Tạo file `tokens.txt` và thêm Discord User Token:
+Mở file `tokens.txt` và điền User Token:
 
 ```
 MTQ2ODIzOTA1NzM1MDk1NTA5OQ.G1xxxxx.xxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+> Nếu dùng nhiều token, mỗi token 1 dòng.
+
+**Cách lấy User Token:**
+1. Mở Discord trên trình duyệt (browser)
+2. Nhấn `F12` → chọn tab **Network**
+3. Gửi tin nhắn bất kỳ trong Discord
+4. Tìm request vừa gửi → **Headers** → **Authorization**
+5. Copy giá trị Authorization (KHÔNG lấy "Bot " hay "Bearer ")
+
+### Bước 5: Cấu hình
+
+Mở file `config/config.json` và điền thông tin:
+
+```json
+{
+    "prefix": ".",
+    "remote-users": [],
+    "autoreply": {
+        "messages": [
+            "https://github.com/",
+            "https://discord.gg/"
+        ],
+        "channels": [],
+        "users": []
+    },
+    "afk": {
+        "enabled": false,
+        "message": "Tôi đang AFK, sẽ quay lại sau!"
+    },
+    "copycat": {
+        "users": []
+    }
+}
 ```
 
 ### Bước 6: Chạy bot
