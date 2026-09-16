@@ -1,0 +1,19 @@
+{
+    "prefix": ".",
+    "remote-users": [],
+    "autoreply": {
+        "messages": [
+            "https://github.com/",
+            "https://discord.gg/"
+        ],
+        "channels": [],
+        "users": []
+    },
+    "afk": {
+        "enabled": false,
+        "message": "I am currently AFK. I will respond as soon as possible!"
+    },
+    "copycat": {
+        "users": []
+    }
+}
